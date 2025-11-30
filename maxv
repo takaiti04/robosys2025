@@ -29,5 +29,8 @@ if len(values) == 0:
 
 m = max(values)
 
-print(f"{m}")
+if m.is_integer():
+    print(int(m))
+else:
+    print(m)
 
