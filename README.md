@@ -1,6 +1,8 @@
 # robosys2025
+![test](https://github.com/takaiti04/robosys2025/actions/workflows/test.yml/badge.svg)
 
-#mbiコマンド
+
+#最大値コマンド
 
 ##ソフトウェア
 
@@ -8,7 +10,6 @@
 
 ロボットシステム学１
 - plusコマンド
-  ![test](https://github.com/takaiti04/robosys2025/actions/workflows/test.yml/badge.svg)
 
 ##ライセンス
 - このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
