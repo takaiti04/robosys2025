@@ -11,4 +11,23 @@ for line in sys.stdin:
     text = raw.strip()
 
 
+    if text == "":
+        print(f"エラー:空行は不可 -- {raw}", file=sys.stderr)
+        sys.exit(1)
+
+    try:
+        num = float(text)
+    except ValueError:
+        print(f"エラー:数値ではない -- {raw}", file=sys.stderr)
+        sys.exit(1)
+
+    values.append(num)
+
+if len(values) == 0:
+    print("エラー:数値が入力されてない", file=sys.stderr)
+    sys.exit(1)
+
+m = max(values)
+
+print(f"{m}")
 
