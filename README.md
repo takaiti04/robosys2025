@@ -1,5 +1,4 @@
-# robosys2025
-## 最大値コマンド
+# 最大値コマンド
 ![test](https://github.com/takaiti04/robosys2025/actions/workflows/test.yml/badge.svg)
 
 利用者が入力した数字の中から最大値を出力します。また、入力された小数の値が整数で出力できる
