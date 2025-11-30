@@ -2,10 +2,15 @@
 ## 最大値コマンド
 ![test](https://github.com/takaiti04/robosys2025/actions/workflows/test.yml/badge.svg)
 
+##利用方法
+
 
 ## ソフトウェア
+- Python
+  -　確認済みバージョン: 3.7 ~ 3.10
 
 ## テスト環境
+- Ubuntu 24.04.1 LTS　
 
 ロボットシステム学１
 - plusコマンド
