@@ -28,6 +28,10 @@ out=$(echo あ | ./maxv)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
+out=$(./maxv < /dev/null)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
+
 [ "$res" = 0 ] && echo OK
 exit $res
 
