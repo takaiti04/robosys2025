@@ -1,8 +1,7 @@
 # robosys2025
+## 最大値コマンド
 ![test](https://github.com/takaiti04/robosys2025/actions/workflows/test.yml/badge.svg)
 
-
-## 最大値コマンド
 
 ## ソフトウェア
 
