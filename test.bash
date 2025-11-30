@@ -8,14 +8,20 @@ ng () {
 
 res=0
 ###NORMAL INPUT###
-out=$(seq 5 | ./plus)
-[ "${out}" = 15 ]  ng "$LINENO"
-###STRANGE INPUT###
-out=$(echo あ | ./plus)           #計算できない値を入力してみる
-[ "$?" = 1 ]       ng "$LINENO" #終了ステータスが1なのを確認
-[ "${out}" = "" ]  ng "$LINENO"
-out=$(echo | ./plus)              #なにも入力しない
-[ "$?" = 1 ]       ng "$LINENO" #これも異常終了する
-[ "${out}" = "" ] || ng "$LINENO"
+out=$(echo -e "10\n52.3\n30" | ./maxv)
+[ "${out}" = "52.3" ] || ng "$LINENO"
+
+out=$(echo -e "1\n100\n20" | ./maxv)
+[ "${out}" = "100" ] || ng "$LINENO"
+
+out=$(echo 45 | ./maxv)
+[ "${out}" = "45" ] || ng "$LINENO"
+
+
 [ "$res" = 0 ] && echo OK
 exit $res
+
+
+
+
+
