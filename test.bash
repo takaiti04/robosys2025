@@ -17,6 +17,8 @@ out=$(echo -e "1\n100\n20" | ./maxv)
 out=$(echo 45 | ./maxv)
 [ "${out}" = "45" ] || ng "$LINENO"
 
+out=$(echo -e "2.0\n1.5\n1.9" | ./maxv)
+[ "${out}" = "2" ] || ng "$LINENO"
 
 ### STRANGE INPUT ###
 
