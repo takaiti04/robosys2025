@@ -23,6 +23,12 @@ out=$(echo -e "2.0\n1.5\n1.9" | ./maxv)
 out=$(echo -e "-10\n-3\n-7" | ./maxv)
 [ "${out}" = "-3" ] || ng "$LINENO"
 
+out=$(echo -e "-5\n0\n1" | ./maxv)
+[ "${out}" = "1" ] || ng "$LINENO"
+
+out=$(echo -e "5\n5\n5" | ./maxv)
+[ "${out}" = "5" ] || ng "$LINENO"
+
 ### STRANGE INPUT ###
 
 out=$(echo -e "10\n\n20" | ./maxv)
