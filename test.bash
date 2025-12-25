@@ -43,6 +43,14 @@ out=$(./maxv < /dev/null)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
+out=$(echo "b1" | ./maxv)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
+
+out=$(echo -e "b1\n5\n3" | ./maxv)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
+
 [ "$res" = 0 ] && echo OK
 exit $res
 
