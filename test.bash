@@ -29,6 +29,9 @@ out=$(echo -e "-5\n0\n1" | ./maxv)
 out=$(echo -e "5\n5\n5" | ./maxv)
 [ "${out}" = "5" ] || ng "$LINENO"
 
+out=$(echo -e " 10\n 20 \n30 " | ./maxv)
+[ "${out}" = "30" ] || ng "$LINENO"
+
 ### STRANGE INPUT ###
 
 out=$(echo -e "10\n\n20" | ./maxv)
@@ -48,6 +51,10 @@ out=$(echo "b1" | ./maxv)
 [ "${out}" = "" ] || ng "$LINENO"
 
 out=$(echo -e "b1\n5\n3" | ./maxv)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
+
+out=$(echo -e "あ\n5\n10" | ./maxv)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
